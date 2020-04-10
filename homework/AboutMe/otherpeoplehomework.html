@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F3E274;
+
+}
+
+
+
+/* Style the header */
+header {
+  background-color: #E38916;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+      text-align: center;
+      background-color: #E38916;
+      color: black;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 1;
+      background-color: #dddddd;
+    }
+
+    td,th {
+      border: 1px solid #000000;
+      text-align: left;
+      padding: 8px;
+      font-family: Microsoft JhengHei;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #dddddd;
+    }
+
+/* Style the footer */
+footer {
+  background-color: #E38916;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+  <h1 style="font-size:50px;text-align:center;">陳楷茗的個人網站</h1>
+<header>
+  <h2>簡歷</h2>
+</header>
+
+<section>
+  
+  
+  <article>
+    <h1>自傳</h1>
+    <p>我叫陳楷茗，來自台南。</p>
+    
+  </article>
+ 
+  
+</section>
+
+<section>
+ <table>
+    <tr>
+      <th class="text">主題</th>
+      <th colspan="2" class="text">內容</th>
+    </tr>
+    <tr>
+    <td>生日</td>
+    <td colspan="2">1999/11/11</td>
+    </tr>
+    <tr>
+      <td>信箱</td>
+      <td colspan="2">s110710545@student.nqu.edu.tw</td>
+    </tr>
+    <tr>
+      <td width="120">目前就讀</td>
+      <td colspan="2"><a href="https://www.nqu.edu.tw/cht/index.php?" target="_blank">國立金門大學</a> /
+                      <a href="https://www.nqu.edu.tw/educsie/index.php?" target="_blank">資訊工程學系</a></td>
+    </tr>
+    <tr>
+      <td>興趣</td>
+      <td colspan="2">聽音樂、看電影、打球</td>
+    </tr>
+  </table>
+</section>
+<section>
+  <img src="test.jpg" style="border:2px black solid;width:500px;height:600px;margin: auto;">
+  
+</section>
+<footer>
+  <p>相關資訊</p>
+  <p><a href="https://www.facebook.com/">Facebook</a> / <a href="https://github.com/mailk8811">Github</a> / <a href="https://www.instagram.com/2_fatty_cats/?hl=zh-tw">Instagram</a></p>
+</footer>
+
+</body>
+</html>
