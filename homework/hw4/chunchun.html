@@ -13,7 +13,20 @@
           @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);   /*cwTeXMing 明體字體  font-family: ‘Noto Sans TC’, sans-serif;*/
 
 
+          #header > .logo a {
+            font-size: 1.25em;
+            color: #3498db;
+          }
 
+            #header > .logo a:hover {
+              color: #3498db;
+            }
+
+          #header > .logo span {
+            font-weight: 300;
+            font-size: .8em;
+            color: #FFF;
+          }  
             body{
                 background:#738CA6;
                 font-family: "Lato", sans-serif;
@@ -23,6 +36,8 @@
                 text-align: center;
                 font-size: 45px;
                 font-family: 'Noto Sans TC', sans-serif;
+            }
+
             }
             
             .sidenav {
@@ -64,9 +79,98 @@
                 .sidenav a {font-size: 18px;}
             }
 
+            /*設定Section的版面*/
+              /*-- Picture --*/
+                .wrapper.style1 {
+                  background:#738CA6;
+                  color: #041D37;
+                }
+
+                .align-center {
+                  text-align: center;   /*文字置中*/
+                }
+
+                .flex.flex-3 {
+                  -moz-align-items: stretch;    
+                  -webkit-align-items: stretch;
+                  -ms-align-items: stretch;
+                  align-items: stretch;    /*表格的大小*/
+                }
+                
+  
+                .image {
+                  border: 0;
+                  display: inline-block;
+                  position: relative;
+                  box-shadow: 0px 0px 0px 7px #fff, 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+                }
+                
+
+                  .image img {
+                    display: block;
+                  }
+
+                  .image.left, .image.right {
+                    max-width: 60%;
+                  }
+
+                  /*讓文字避開圖片*/
+                    .image.left img, .image.right img {
+                      width: 60%;
+                    }
+
+                    .image.left {
+                      float: left;    /*浮動區塊 使文字繞著圖片*/
+                      margin: 0 1.5em 1em 0;     /*邊框間距*/
+                      top: 0.25em;     /*距離上面文字的距離*/
+                    }
+
+                    .image.right {
+                      float: right;
+                      margin: 0 0 1em 1.5em;
+                      top: 0.25em;
+                    }
+
+                  .image.fit {
+                    display: block;
+                    margin: 0 0 2em 0;
+                    width: 60%;
+                  }
+
+                    .image.fit img {
+                      width: 60%;
+                    }
+
+                  /*圖形邊框的邊角變成圓弧形*/
+                    .image.round {
+                      border-radius: 100%;
+                    }
+
+                      .image.round img {
+                        border-radius: 100%;
+                      }
+
+                  .image.main {
+                    display: block;
+                    margin: 0 0 3em 0;
+                    width: 60%;
+                  }
+
+                  .image.main img {
+                    width: 60%;
+                  }
+
+
         </style>
     </head>
 
+    <header id="header">
+      <div class="logo"><a href="index.html">Urban <span>by TEMPLATED</span></a></div>
+      <a href="#menu">Menu</a>
+    </header>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Main menu</span>
+    
     <title>淳淳欲動</title>
     <h1>ChunChun wants to keep moving</h1>
 
@@ -78,10 +182,41 @@
         <a href="#">Kinmen Life</a>
         <a href="#">Studt Note</a>
       </div>
-
-      <h2>Why are there three major themes</h2>
-      <p>When you live, you must absorb more knowledge, open your horizons, and develop your own relationships.</p>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Main menu</span>
+          
+      <!-- Section2 -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<header class="align-center">
+                <h2>Origin of the name</h2>
+                <p>The title of this name is to combine my name with the things I like.</p>
+								<h2>Why are there three major themes</h2>
+								<p>When you live, you must absorb more knowledge, open your horizons, and develop your own relationships.I am an optimistic person. I like to make friends and absorb new knowledge. I like to share the joy of life and spread it to everyone.</p>
+							</header>
+							<div class="flex flex-3">
+								<div class="col align-center">
+									<div class="image round fit">
+										<img src="picture/82840.jpg" alt="" />
+									</div>
+									<p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet. </p>
+									<a href="#" class="button">Learn More</a>
+								</div>
+								<div class="col align-center">
+									<div class="image round fit">
+										<img src="picture/82841.jpg" alt="" />
+									</div>
+									<p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet. </p>
+									<a href="#" class="button">Learn More</a>
+								</div>
+								<div class="col align-center">
+									<div class="image round fit">
+										<img src="picture/82839.jpg" alt="" />
+									</div>
+									<p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet. </p>
+									<a href="#" class="button">Learn More</a>
+								</div>
+							</div>
+						</div>
+					</section>
 
       <script>
         function openNav() {
