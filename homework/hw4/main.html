@@ -6,7 +6,7 @@
             <style>
 
                 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);   /*Noto Sans 思源黑體  font-family: 'Noto Sans TC', sans-serif;*/
-                @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&display=swap');/*英文字體設定*/
 
                 body {
                     font-family: 'Josefin Sans', sans-serif;
@@ -53,19 +53,21 @@
                     position: absolute;
                     background-color: #4A6A8A;
                     min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);/*功能表陰影顏色*/
                     z-index: 1;
                 }
 
+                /*功能表下拉式選單字體調整*/
                 .dropdown-content a {
                     float: none;
-                    color: black;
+                    color: #133253;
                     padding: 12px 16px;
                     text-decoration: none;
                     display: block;
                     text-align: left;
                 }
 
+                /*功能表下拉式選單*/
                 .dropdown-content a:hover {
                     background-color: #80A7CF;
                 }
@@ -73,27 +75,91 @@
                 .dropdown:hover .dropdown-content {
                     display: block;
                 }
+                /*--以上功能表設定完畢--*/
+
+                /*--側邊表單的設定--*/
+                .sidenav {
+                    height: 100%;
+                    width: 0;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    background-color: #111;
+                    overflow-x: hidden;
+                    transition: 0.5s;
+                    padding-top: 60px;
+                }
+
+                .sidenav a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: #818181;
+                    display: block;
+                    transition: 0.3s;
+                }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+                .sidenav .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                }
+                @media screen and (max-height: 450px) {
+                    .sidenav {padding-top: 15px;}
+                    .sidenav a {font-size: 18px;}
+                }
+                /*--側邊表單設定完成--*/
+
             </style>
     </head>
-<body>
+    <body>
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div> 
-</div>
+        <div class="navbar"> 
+            <a href="#home">Home</a>
+            <a href="#news">Introduction</a>
+            <div class="dropdown">
+                <button class="dropbtn">Kinmen
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Travel</a>
+                    <a href="#">Food</a>
+                    <a href="#">Life</a>
+                </div>
+            </div> 
+        </div>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+          
+          <h2>Right-sided Navigation</h2>
+          <p>Click on the element below to open the right-sided navigation menu.</p>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+          
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
 
-</body>
+        <h3>Dropdown Menu inside a Navigation Bar</h3>
+        <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+    </body>
 </html>
