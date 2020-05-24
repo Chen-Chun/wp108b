@@ -16,15 +16,32 @@
                 h1{
                     font-size: 80px;
                     padding: 100px;
-                    margin: 50px;
-                }
-                h2{
-                    font-size: 30px;
                 }
                 p{
                     font-size: 20px;
                 }
-                
+
+                /*--背景圖片設定--*/
+                div.background {
+                    background: url(picture/83588.jpg) ;
+                    background-position: center;
+                    border: 2px solid black;
+                }
+
+                div.transbox {
+                    margin: 150px;
+                    background-color: #ffffff;
+                    border: 1px solid black;
+                    opacity: 0.5;
+                }
+
+                div.transbox p {
+                    margin: 10%;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                /*--背景圖片設定完成--*/
+
                 /*用在圖片和圖片下文字設定*/
                 * {
                     box-sizing: border-box;
@@ -134,39 +151,6 @@
                 }
                 /*--側邊表單設定完成--*/
 
-                /*--圖片的設定--*/
-                .column {
-                    float: left;
-                    width: 33.33%;
-                    padding: 5px;
-                }
-
-                /* 清除浮動 */
-                .row::after {
-                    content: "";
-                    clear: both;
-                    display: table;
-                }
-
-                img {
-                    border-radius: 50%;
-                }
-                /*--圖片設定完成--*/
-
-                /*--圖片下的文字設定--*/
-                .column {
-                    float: left;
-                    width: 33.33%;/* 創造三格相鄰的列，讓他們相鄰 */
-                    padding: 10px;
-                }
-
-                /* 清除浮點 */
-                .row:after {
-                    content: "";
-                    display: table;
-                    clear: both;
-                }
-                /*--圖片下的文字設定完畢--*/
 
             </style>
     </head>
@@ -199,9 +183,14 @@
                 <a href="life.html">-Life</a>
             <a href="learn.html">Study</a>
         </div>
-          
-          <h1>ChunChun wants to keep moving</h1>
 
+        <div class="background">
+            <div class="transbox">
+                <h1>Food</h1>
+                <p>It may look like I'm having really deep thoughts but 99% of the time I'm just thinking what food I'm going to eat laster.</p>
+            </div>
+        </div>
+                  
         <script>
           function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -211,39 +200,5 @@
             document.getElementById("mySidenav").style.width = "0";
           }
         </script>
-
-            <h2>Origin of the name</h2>
-            <p>The title of this name is to combine my name with the things I like.</p>
-            <h2>Why are there three major themes</h2>
-            <p>When you live, you must absorb more knowledge, open your horizons, and develop your own relationships.I am an optimistic person. I like to make friends and absorb new knowledge. I like to share the joy of life and spread it to everyone.</p>
-
-            <div class="row">
-                <div class="column">
-                  <img src="picture/82840.jpg" alt="82840" style="width: 100%;" >
-                </div>
-                <div class="column">
-                  <img src="picture/kinmen1.jpg" alt="82841" style="width:100%">
-                </div>
-                <div class="column">
-                  <img src="picture/82839.jpg" alt="82839" style="width:100%">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="column" >
-                  <h2>Introduction</h2>
-                  <p>About my information</p>
-                </div>
-                <div class="column" >
-                  <h2>Kinmen</h2>
-                  <p>Where to travel</p>
-                  <p>What food did you eat</p>
-                  <p>About my future</p>
-                </div>
-                <div class="column" >
-                  <h2>Study</h2>
-                  <p>My study notes</p>
-                </div>
-              </div>
     </body>
 </html>

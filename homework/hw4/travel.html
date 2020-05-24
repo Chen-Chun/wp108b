@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+
+            @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);   /*Noto Sans 思源黑體  font-family: 'Noto Sans TC', sans-serif;*/
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&display=swap');/*英文字體設定*/
+
+            body {
+                font-family: 'Josefin Sans', sans-serif;
+                background-color: #2B4C6F;
+                text-align: center;
+            }
+            h1{
+                font-size: 80px;
+                padding: 100px;
+            }
+            p{
+                font-size: 20px;
+            }
+
+            /*--背景圖片設定--*/
+            div.background {
+                background: url(picture/82841.jpg) ;
+                background-position: center;
+                border: 2px solid black;
+            }
+
+            div.transbox {
+                margin: 150px;
+                background-color: #ffffff;
+                border: 1px solid black;
+                opacity: 0.5;
+            }
+
+            div.transbox p {
+                margin: 10%;
+                font-weight: bold;
+                color: #000000;
+            }
+            /*--背景圖片設定完成--*/
+
+            /*用在圖片和圖片下文字設定*/
+            * {
+                box-sizing: border-box;
+            }
+
+            /*--功能表的設定--*/
+            .navbar {
+                overflow: hidden;/*自動隱藏超出的文字或圖片*/
+                background-color: #071523;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 20px;
+                color: rgb(212, 223, 243);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }/*功能表字體設定*/
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 20px;  
+                border: none;
+                outline: none;
+                color: rgb(212, 223, 243);
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #4A6A8A;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #4A6A8A;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);/*功能表陰影顏色*/
+                z-index: 1;
+            }
+
+            /*功能表下拉式選單字體調整*/
+            .dropdown-content a {
+                float: none;
+                color: #133253;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            /*功能表下拉式選單*/
+            .dropdown-content a:hover {
+                background-color: #80A7CF;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            /*--以上功能表設定完畢--*/
+
+            /*--側邊表單的設定--*/
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;/*使此測邊表單距離電腦螢幕近(值越大距離越近)*/
+                top: 0;
+                right: 0;/*讓側邊表單由右向左開*/
+                background-color: #041D37;/*測欄的表格顏色*/
+                overflow-x: hidden;/*表單裡文字裡面字體表現*/
+                transition: 0.5s;/*側邊表單拉出來的速度*/
+                padding-top: 60px;/*側邊表單字體距離最上面的距離*/
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;/*讓文字沒有效果*/
+                font-size: 25px;
+                color: #4A6A8A;/*測欄字體顏色*/
+                display: block;/*讓測欄文字換行*/
+                transition: 0.3s;/*文字從測欄中出現的大小變化速度*/
+            }
+
+            .sidenav a:hover {
+                color: #9FBDDD;/*碰到文字後的顏色變化*/
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+            /*--側邊表單設定完成--*/
+
+
+        </style>
+    </head>
+    
+    <body>
+        <div class="navbar" align="right"> 
+            <a href="main.html">Home</a>
+            <a href="about.html">Introduction</a>
+            <div class="dropdown">
+                <button class="dropbtn">Kinmen
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="travel.html">Travel</a>
+                    <a href="food.html">Food</a>
+                    <a href="life.html">Life</a>
+                </div>
+            </div> 
+            <a href="learn.html">Study</a>
+            <span style="font-size:30px;cursor:pointer;color: rgb(212, 223, 243);" onclick="openNav()">&#9776; </span>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="main.html">Home</a>
+            <a href="about.html">Introduction</a>
+            <a href="kinmen.html">Kinmen</a>
+                <a href="travel.html">-Travel</a>
+                <a href="food.html">-Food</a>
+                <a href="life.html">-Life</a>
+            <a href="learn.html">Study</a>
+        </div>
+
+        <div class="background">
+            <div class="transbox">
+                <h1>Travel</h1>
+                <p>Life at least two impulses,one for love regardless of personal danger,go to travel.On the road,not travel,not for someone,only to meet the unknow in the unknow.</p>
+            </div>
+        </div>
+
+                  
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
+    </body>
+</html>
