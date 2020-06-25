@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+</head>
+ 
+<body>
+
+    <script>
+        function light(sw) {
+          var pic;
+            if (sw == 0) {
+                pic = "pic_bulboff.gif"
+            } 
+            else {
+                pic = "pic_bulbon.gif"
+            }
+          document.getElementById('myImage').src = pic;
+        }
+
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script>
+
+
+    <style>
+
+        .city {
+            background-color: black;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+    </style>
+
+        <div class="city">
+            <h2>London</h2>
+            <p>London is the capital of England.</p>
+        </div> 
+
+        <div class="city">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div class="city">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <h2>The id Attribute</h2>
+        <p>Use CSS to style an element with the id "myHeader":</p>
+        
+        <h1 id="myHeader">My Header</h1>
+
+        <h2>HTML Iframes</h2>
+        <p>You can use the height and width attributes to specify the size of the iframe:</p>
+        <iframe src="demo_iframe.htm" height="200" width="300"></iframe>
+
+        <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+        
+        <p>
+            <button type="button" onclick="light(1)">Light On</button>
+            <button type="button" onclick="light(0)">Light Off</button>
+        </p>
+
+        <p id="demo"></p>
+
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    
+        <p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+
+        <h2>Using a Full URL File Path</h2>
+        <img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain" style="width:300px">
+
+        <p>The content of the body element is displayed in the browser window.</p>
+        <p>The content of the title element is displayed in the browser tab, in favorites and in search engine results.</p>
+
+<body>

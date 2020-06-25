@@ -19,4 +19,4 @@ class Vector{
     }
 }
 
-module.exports=Vector;
+ module.exports=Vector;

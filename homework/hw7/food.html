@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);   /*Noto Sans 思源黑體  font-family: 'Noto Sans TC', sans-serif;*/
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&display=swap');/*英文字體設定*/
+            @import url(./main.css);
+        </style>
+    </head>
+
+    <body>
+
+        <div class="navbar" align="right"> 
+            <a href="main.html">Home</a>
+            <a href="about.html">Introduction</a>
+            <div class="dropdown">
+                <button class="dropbtn">Kinmen
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="travel.html">Travel</a>
+                    <a href="food.html">Food</a>
+                    <a href="life.html">Life</a>
+                </div>
+            </div> 
+            <a href="learn.html">Study</a>
+            <span style="font-size:30px;cursor:pointer;color: rgb(212, 223, 243);" onclick="openNav()">&#9776; </span>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="main.html">Home</a>
+            <a href="about.html">Introduction</a>
+            <a href="kinmen.html">Kinmen</a>
+                <a href="travel.html">-Travel</a>
+                <a href="food.html">-Food</a>
+                <a href="life.html">-Life</a>
+            <a href="learn.html">Study</a>
+        </div>
+
+        <div class="background">
+            <div class="transbox">
+                <h1>Food</h1>
+                <p>It may look like I'm having really deep thoughts but 99% of the time I'm just thinking what food I'm going to eat laster.</p>
+            </div>
+        </div>
+                  
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
+        
+    </body>
+</html>

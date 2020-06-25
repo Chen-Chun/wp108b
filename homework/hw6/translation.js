@@ -10,5 +10,5 @@ function mt (c) {
   return e
 }
 
-var a = process.argv.slice(2)
+var e = (process.argv.slice(2))
 console.log(e)
