@@ -13,32 +13,6 @@ p{
     font-size: 20px;
 }
 
-/*--背景圖片設定--*/
-div.background {
-    background: url(picture/82841.jpg) ;
-    background-position: center;
-    border: 2px solid black;
-}
-
-div.transbox {
-    margin: 150px;
-    background-color: #ffffff;
-    border: 1px solid black;
-    opacity: 0.5;
-}
-
-div.transbox p {
-    margin: 10%;
-    font-weight: bold;
-    color: #000000;
-}
-/*--背景圖片設定完成--*/
-
-/*用在圖片和圖片下文字設定*/
-* {
-    box-sizing: border-box;
-}
-
 /*--功能表的設定--*/
 .navbar {
     overflow: hidden;/*自動隱藏超出的文字或圖片*/

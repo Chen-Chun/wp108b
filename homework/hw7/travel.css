@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 80px;
+    padding: 100px;
+}
+
+/*--背景圖片設定--*/
+div.background {
+    background: url(picture/82841.jpg) ;
+    background-position: center;
+    border: 2px solid black;
+}
+
+div.transbox {
+    margin: 150px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.5;
+}
+
+div.transbox p {
+    margin: 10%;
+    font-weight: bold;
+    color: #000000;
+}
+/*--背景圖片設定完成--*/

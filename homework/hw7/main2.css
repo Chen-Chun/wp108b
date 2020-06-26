@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+/*--圖片的設定--*/
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* 清除浮動 */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+img {
+    border-radius: 50%;
+}
+/*--圖片設定完成--*/
+
+/*--圖片下的文字設定--*/
+.column {
+    float: left;
+    width: 33.33%;/* 創造三格相鄰的列，讓他們相鄰 */
+    padding: 10px;
+}
+
+/* 清除浮點 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*--圖片下的文字設定完畢--*/
